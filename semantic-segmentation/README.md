@@ -22,3 +22,5 @@ To modify the model used in the sample application:
 3.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()` and `postProcess()`, `convertBitmapToFloatArray()` functions.
 
 ## Compatible AI Models
+There are currently no supported models.
+If new models are registered in the after and are expected to be compatible with the sample application they will be updated here.

@@ -21,3 +21,7 @@ To modify the model used in the sample application:
 1.	Copy the desired model file to the `assets` directory of the project.
 2.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
 3.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()` and `postProcess()`, `convertBitmapToFloatArray()` functions.
+
+## Compatible AI Models
+There are currently no supported models.
+If new models are registered in the after and are expected to be compatible with the sample application they will be updated here.
