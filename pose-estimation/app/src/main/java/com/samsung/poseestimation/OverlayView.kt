@@ -6,6 +6,7 @@ import android.content.Context
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import com.samsung.poseestimation.data.Human
@@ -24,6 +25,10 @@ class OverlayView(
 
     private var scale = 1F
     private var offset = 0F
+
+    private var scaleX = 1F;
+    private var scaleY = 1F;
+
 
     init {
         initPaints()
@@ -45,25 +50,29 @@ class OverlayView(
 
     fun setResults(human: Human) {
         result = human
-        scale = min(width.toFloat(), height.toFloat()) / 257
-        offset = (max(width.toFloat(), height.toFloat()) - min(width.toFloat(), height.toFloat())) / 2 + 0
+
+        scaleX = width.toFloat() / 257  // (257 is input image width size)
+        scaleY = height.toFloat() / 513 // (513 is input image height size)
+
     }
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
 
         result?.let { human ->
+
             human.points.forEach {
-                canvas.drawPoint(
-                    it.coordinate.x * scale, it.coordinate.y * scale + offset, pointPaint
-                )
+                val x = it.coordinate.x * scaleX
+                val y = it.coordinate.y * scaleY
+
+                canvas.drawPoint(x, y, pointPaint)
             }
             human.edges.forEach {
                 canvas.drawLine(
-                    it.first.coordinate.x * scale,
-                    it.first.coordinate.y * scale + offset,
-                    it.second.coordinate.x * scale,
-                    it.second.coordinate.y * scale + offset,
+                    it.first.coordinate.x * scaleX,
+                    it.first.coordinate.y * scaleY,
+                    it.second.coordinate.x * scaleX,
+                    it.second.coordinate.y * scaleY,
                     edgePaint
                 )
             }
