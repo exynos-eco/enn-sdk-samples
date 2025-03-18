@@ -1,28 +1,29 @@
 # Image Classification In Android
-This Application explains how a simple Android Sample Application operates using the [Densenet121](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/118f8cc6-f251-43b7-b8c2-ec77a3c50fda) model optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Densenet121](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/118f8cc6-f251-43b7-b8c2-ec77a3c50fda) model that is optimized for Exynos hardware.
 
 ## Functionality
-This application classifies objects in images either from stored image files or captured via the camera.
+This application classifies objects in images that are either from stored image files or those captured through a camera.
 The classified items, corresponding scores, and inference time are displayed at the bottom of the application interface.
 
 ## Getting Started
-To utilize the sample application:
+Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no available device to run the application, you can use the real devices provided in the Device Farm.
-    For guidance on connecting a device to Android Studio, refer to the [Documentation](https://prd.ai-studio-farm.com/global/development/enn-sdk/document/documentation) menu under AI Studio Farm → 2. Device Remote Control → 2-7 ADB Proxy Guide.
-3.  Push a sample image for testing to the following path using adb push.
-4.  After confirming a proper connection with Device Farm, select Tools -> Device Manager in Android Studio.
-5.  Next that check if the physical device is properly connected.
-6.  Run the Image Classification project from the Sample Applications obtained via git clone in Android Studio.
-7.  Upload the image data for inference and execute the application.
+2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm.
+    For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
+3.  Use adb push command to push a sample image to the following path for testing.
+4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
+5.  Run the depth estimation project from the sample applications obtained through git clone in Android Studio.
+6.  Upload the image data for inference and execute the application.
 
-To modify the model used in the sample application:
+Perform the following steps to modify the model used in the sample application:
 1.	Copy the desired model file to the `assets` directory of the project.
 2.	Copy the corresponding label text file to the `assets` directory.
 3.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
-4.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()` and `postProcess()`, `convertBitmapToFloatArray()` functions.
+4.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
 
 ## Compatible AI Models
+Below is a list of models expected to be compatible with the sample application.
+**Note:** All models that are listed here are not individually tested with this application.
 [EfficientNet-B4](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/9d310aaa-d2f0-43d8-bdb1-0c31413da46e)
 [MobileNet-v2](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/0c031a1e-0eed-442d-9691-421d416a5556)
 [ResNet18](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/4c29e543-f74f-4bc3-a373-bc993c7ac7df)
