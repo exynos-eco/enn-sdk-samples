@@ -1,5 +1,5 @@
 # Depth Estimation In Android
-This document describes a method to operate Android sample application operates using the [Midas v2](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/73bcae23-4a07-4df9-b0c5-80504427c11c) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application operates using the [Midas_v2](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/73bcae23-4a07-4df9-b0c5-80504427c11c) model that is optimized for Exynos hardware.
 
 ## Functionality
 This application receives input that are either from an image file or those captured through a camera.

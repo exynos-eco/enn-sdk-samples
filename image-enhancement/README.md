@@ -1,5 +1,5 @@
 # Image Enhance In Android
-This document describes a method to operate Android sample application using the [Real esrgan general x4v3](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/36ad7134-5621-48b2-8ddf-e4889417f6ef) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Real_esrgan_general_x4v3](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/36ad7134-5621-48b2-8ddf-e4889417f6ef) model that is optimized for Exynos hardware.
 
 ## Functionality
 This application enhances the low-light quality of images that are either from stored image files or those captured through the camera. 

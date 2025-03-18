@@ -1,5 +1,5 @@
 # Object Detection In Android
-This document describes a method to operate Android sample application using the [Detr_resnet50_dc5](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/a631921e-dc8b-46cb-ac17-d23c5a54db26) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Detr_resNet50_dc5](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/a631921e-dc8b-46cb-ac17-d23c5a54db26) model that is optimized for Exynos hardware.
 
 ## Functionality
 This sample application identifies objects in images that are either from stored image files or those captured through the camera. 
@@ -25,4 +25,4 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Below is a list of models expected to be compatible with the sample application.
 **Note:** All models that are listed here are not individually tested with this application.
-[Detr_resnet101_dc5](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/9eb3e0fd-4478-49e4-b631-5941ce62d16c)
+[Detr_resNet101_dc5](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/9eb3e0fd-4478-49e4-b631-5941ce62d16c)
