@@ -1,5 +1,5 @@
 # Segmentation In Android
-This document describes a method to operate Android sample application operates using the [Ddrnet23_slim](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/994cb06f-b886-4fb6-b8e9-8b4efdc8baee) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application operates using the [DdrNet23_slim](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/994cb06f-b886-4fb6-b8e9-8b4efdc8baee) model that is optimized for Exynos hardware.
 
 ## Functionality
 This sample application provides semantic segmentation results for images that are either from stored image files or those captured through the camera. 

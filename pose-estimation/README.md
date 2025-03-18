@@ -1,5 +1,5 @@
 # Pose Estimation In Android
-This document describes a method to operate Android sample application using the [Posenet mobilenet](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/f40473cb-a6e6-42a3-a50a-daf428273eab) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Posenet_MobileNet](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/f40473cb-a6e6-42a3-a50a-daf428273eab) model that is optimized for Exynos hardware.
 
 ## Functionality
 This application detects key points in images that are either from stored image files or those captured through the camera and automatically measures joint positions.
