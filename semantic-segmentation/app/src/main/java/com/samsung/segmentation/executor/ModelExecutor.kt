@@ -122,18 +122,20 @@ class ModelExecutor(
                 val byteBuffer = ByteBuffer.wrap(modelOutput).order(ByteOrder.nativeOrder())
                 val floatBuffer = byteBuffer.asFloatBuffer()
                 val data = FloatArray(floatBuffer.remaining())
-                val result = IntArray(OUTPUT_SIZE_W * OUTPUT_SIZE_H)
-
                 floatBuffer.get(data)
-                for (i in 0 until OUTPUT_SIZE_H * OUTPUT_SIZE_W) {
-                    val startIndex = i * OUTPUT_SIZE_C
+
+                val pixelCount = OUTPUT_SIZE_H * OUTPUT_SIZE_W
+                val result = IntArray(pixelCount)
+
+                for (i in 0 until pixelCount) {
                     var maxValue = 0F
                     var maxIndex = 0
 
-                    for (j in 0 until OUTPUT_SIZE_C) {
-                        if ((data[startIndex + j] > maxValue)) {
-                            maxValue = data[startIndex + j]
-                            maxIndex = j
+                    for (c in 0 until OUTPUT_SIZE_C) {
+                        val index = c * pixelCount + i
+                        if (data[index] > maxValue) {
+                            maxValue = data[index]
+                            maxIndex = c
                         }
                     }
                     result[i] = maxIndex
@@ -264,9 +266,8 @@ class ModelExecutor(
 
     companion object {
         private val colorList = mutableListOf<Int>().apply {
-            add(Color.HSVToColor(0, floatArrayOf(0F, 0F, 0F)))
-            for (i in 0 until ModelConstants.OUTPUT_SIZE_C + 1) {
-                add(Color.HSVToColor(150, floatArrayOf(360F / 31 * i, 100F, 100F)))
+            for (i in 0 until ModelConstants.OUTPUT_SIZE_C) {
+                add(Color.HSVToColor(150, floatArrayOf(360F / 19 * i, 0.8F, 1F)))
             }
         }
 
