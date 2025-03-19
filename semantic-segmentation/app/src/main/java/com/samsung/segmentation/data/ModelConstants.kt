@@ -3,13 +3,13 @@
 package com.samsung.segmentation.data
 
 object ModelConstants {
-    const val MODEL_NAME = "deeplabv3.nnc"
+    const val MODEL_NAME = "ddrnet23_slim_model_simplify_O2_SingleCore.nnc"
 
     val INPUT_DATA_TYPE = DataType.FLOAT32
-    val INPUT_DATA_LAYER = LayerType.HWC
+    val INPUT_DATA_LAYER = LayerType.CHW
 
-    const val INPUT_SIZE_W = 257
-    const val INPUT_SIZE_H = 257
+    const val INPUT_SIZE_W = 640
+    const val INPUT_SIZE_H = 1280
     const val INPUT_SIZE_C = 3
 
     const val INPUT_CONVERSION_SCALE = 127.5F
@@ -17,9 +17,9 @@ object ModelConstants {
 
     val OUTPUT_DATA_TYPE = DataType.FLOAT32
 
-    const val OUTPUT_SIZE_H = INPUT_SIZE_H
-    const val OUTPUT_SIZE_W = INPUT_SIZE_W
-    const val OUTPUT_SIZE_C = 21
+    const val OUTPUT_SIZE_H = 160
+    const val OUTPUT_SIZE_W = 80
+    const val OUTPUT_SIZE_C = 19
 
     const val OUTPUT_CONVERSION_SCALE = 1F
     const val OUTPUT_CONVERSION_OFFSET = 0F

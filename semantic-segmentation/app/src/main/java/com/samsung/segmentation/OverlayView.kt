@@ -37,7 +37,7 @@ class OverlayView(
         super.onDraw(canvas)
 
         resultMask?.let {
-            canvas.drawBitmap(it, 0F, (height - scaleHeight) / 2F, null)
+            canvas.drawBitmap(it, (width-scaleWidth)/2F, (height - scaleHeight) / 2F, null)
         }
     }
 
