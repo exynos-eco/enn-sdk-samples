@@ -99,7 +99,6 @@ class ModelExecutor(
                 byteBuffer.asFloatBuffer().put(data)
                 byteBuffer.array()
             }
-
             else -> {
                 throw IllegalArgumentException("Unsupported input data type: ${INPUT_DATA_TYPE}")
             }
@@ -122,9 +121,9 @@ class ModelExecutor(
 
         return IntArray(OUTPUT_SIZE_W * OUTPUT_SIZE_H) { i ->
             convertToArgb(
-                r = data[i * stride + offset[0]],
-                g = data[i * stride + offset[1]],
-                b = data[i * stride + offset[2]],
+                r = (data[i * stride + offset[0]]).coerceIn(0f,1f),
+                g = (data[i * stride + offset[1]]).coerceIn(0f,1f),
+                b = (data[i * stride + offset[2]]).coerceIn(0f,1f),
                 a = 255
             )
         }
