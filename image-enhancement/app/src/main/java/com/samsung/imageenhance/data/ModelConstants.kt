@@ -12,7 +12,7 @@ object ModelConstants {
     const val INPUT_SIZE_H = 128
     const val INPUT_SIZE_C = 3
 
-    const val INPUT_CONVERSION_SCALE = 256F
+    const val INPUT_CONVERSION_SCALE = 255F
     const val INPUT_CONVERSION_OFFSET = 0F
 
     val OUTPUT_DATA_TYPE = DataType.FLOAT32
@@ -22,6 +22,6 @@ object ModelConstants {
     const val OUTPUT_SIZE_H = 512
     const val OUTPUT_SIZE_C = INPUT_SIZE_C
 
-    const val OUTPUT_CONVERSION_SCALE = 256F
+    const val OUTPUT_CONVERSION_SCALE = 255F
     const val OUTPUT_CONVERSION_OFFSET = 0F
 }
