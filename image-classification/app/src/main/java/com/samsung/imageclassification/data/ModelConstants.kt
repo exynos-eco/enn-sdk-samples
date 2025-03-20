@@ -3,7 +3,7 @@
 package com.samsung.imageclassification.data
 
 object ModelConstants {
-    const val MODEL_NAME = "densenet121.nnc"
+    const val MODEL_NAME = "DenseNet121.nnc"
 
     val INPUT_DATA_TYPE = DataType.FLOAT32
     val INPUT_DATA_LAYER = LayerType.CHW
@@ -20,5 +20,5 @@ object ModelConstants {
     const val OUTPUT_CONVERSION_SCALE = 1F
     const val OUTPUT_CONVERSION_OFFSET = 0F
 
-    const val LABEL_FILE = "densenet121.txt"
+    const val LABEL_FILE = "DenseNet121.txt"
 }

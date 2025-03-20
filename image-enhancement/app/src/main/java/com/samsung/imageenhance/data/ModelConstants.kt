@@ -3,7 +3,7 @@
 package com.samsung.imageenhance.data
 
 object ModelConstants {
-    const val MODEL_NAME = "real_esrgan_general_x4v3.nnc"
+    const val MODEL_NAME = "Real-ESRGAN-General-x4v3.nnc"
 
     val INPUT_DATA_TYPE = DataType.FLOAT32
     val INPUT_DATA_LAYER = LayerType.CHW
