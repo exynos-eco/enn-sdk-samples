@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import com.samsung.objectdetection.data.DetectionResult
 import java.lang.Float.max
 import java.lang.Float.min
+import android.util.Log
 
 
 class OverlayView(
@@ -59,7 +60,6 @@ class OverlayView(
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-
         results.forEach { result ->
             val boundingBox = result.requireBoundingBox()
             val scaledBoundingBox = getScaledCoordinates(boundingBox)
