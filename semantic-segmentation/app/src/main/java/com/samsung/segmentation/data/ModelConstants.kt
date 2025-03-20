@@ -3,7 +3,7 @@
 package com.samsung.segmentation.data
 
 object ModelConstants {
-    const val MODEL_NAME = "ddrnet23_slim_model_simplify_O2_SingleCore.nnc"
+    const val MODEL_NAME = "DDRNet23_slim.nnc"
 
     val INPUT_DATA_TYPE = DataType.FLOAT32
     val INPUT_DATA_LAYER = LayerType.CHW

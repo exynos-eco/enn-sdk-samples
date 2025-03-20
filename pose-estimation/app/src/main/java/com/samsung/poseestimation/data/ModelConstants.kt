@@ -4,7 +4,7 @@ package com.samsung.poseestimation.data
 
 object ModelConstants {
 
-    const val MODEL_NAME = "posenet_mobilenet.nnc"
+    const val MODEL_NAME = "PoseNet_MobileNet.nnc"
 
     val INPUT_DATA_TYPE = DataType.FLOAT32
     val INPUT_DATA_LAYER = LayerType.CHW
