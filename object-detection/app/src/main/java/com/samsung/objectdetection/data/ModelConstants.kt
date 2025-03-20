@@ -3,7 +3,7 @@
 package com.samsung.objectdetection.data
 
 object ModelConstants {
-    const val MODEL_NAME = "detr_resnet50_dc5.nnc"
+    const val MODEL_NAME = "DETR_ResNet50_dc5.nnc"
 
     val INPUT_DATA_TYPE = DataType.FLOAT32
     val INPUT_DATA_LAYER = LayerType.CHW
@@ -21,5 +21,5 @@ object ModelConstants {
     const val OUTPUT_NUM_CLASSES = 92
     const val OUTPUT_BOX_COORDS = 4
 
-    const val LABEL_FILE = "detr_resnet50_dc5.txt"
+    const val LABEL_FILE = "DETR_ResNet50_dc5.txt"
 }
