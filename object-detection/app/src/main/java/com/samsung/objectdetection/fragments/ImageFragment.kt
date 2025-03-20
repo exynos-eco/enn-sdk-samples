@@ -46,6 +46,7 @@ class ImageFragment : Fragment(), ModelExecutor.ExecutorListener {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View {
+        Log.d("ImageFragment", "================ onCreateView")
         binding = FragmentImageBinding.inflate(layoutInflater)
 
         return binding.root
@@ -55,7 +56,7 @@ class ImageFragment : Fragment(), ModelExecutor.ExecutorListener {
         view: View, savedInstanceState: Bundle?
     ) {
         super.onViewCreated(view, savedInstanceState)
-
+        Log.d("ImageFragment", "================ onViewCreated")
         modelExecutor = ModelExecutor(
             context = requireContext(), executorListener = this
         )
@@ -64,6 +65,7 @@ class ImageFragment : Fragment(), ModelExecutor.ExecutorListener {
     }
 
     private fun setUI() {
+        Log.d("ImageFragment", "================ setUI")
         binding.buttonLoad.setOnClickListener {
             getContent.launch("image/*")
         }
@@ -87,6 +89,8 @@ class ImageFragment : Fragment(), ModelExecutor.ExecutorListener {
     }
 
     private fun processImage(bitmap: Bitmap): Bitmap {
+        binding.overlay.clear()
+
         val (scaledWidth, scaledHeight) = calculateScaleSize(
             bitmap.width, bitmap.height
         )

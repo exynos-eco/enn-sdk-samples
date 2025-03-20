@@ -87,6 +87,8 @@ class ImageFragment : Fragment(), ModelExecutor.ExecutorListener {
     }
 
     private fun processImage(bitmap: Bitmap): Bitmap {
+        binding.overlay.clear()
+
         val (scaledWidth, scaledHeight) = calculateScaleSize(
             bitmap.width, bitmap.height
         )
