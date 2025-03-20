@@ -22,7 +22,7 @@ Perform the following steps to modify the model used in the sample application:
 4.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
 
 ## Compatible AI Models
-Below is a list of models expected to be compatible with the sample application.
+Below is a list of models expected to be compatible with the sample application.  
 **Note:** All models that are listed here are not individually tested with this application.  
 [EfficientNet_B4](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/9d310aaa-d2f0-43d8-bdb1-0c31413da46e)  
 [MobileNet_v2](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/0c031a1e-0eed-442d-9691-421d416a5556)  
