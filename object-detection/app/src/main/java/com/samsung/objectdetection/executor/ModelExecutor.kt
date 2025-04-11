@@ -2,9 +2,12 @@
 
 package com.samsung.objectdetection.executor
 
+import android.app.AlertDialog
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.RectF
+import android.os.Handler
+import android.os.Looper
 import android.os.SystemClock
 import android.util.Log
 import com.samsung.objectdetection.data.DataType
@@ -226,7 +229,24 @@ class ModelExecutor(
             inputStream.close()
             outputStream.close()
         } catch (e: IOException) {
-            e.printStackTrace()
+            showModelDownloadPopup()
+        }
+    }
+
+    private fun showModelDownloadPopup() {
+        Handler(Looper.getMainLooper()).post {
+            AlertDialog.Builder(context)
+                .setTitle("Model File Not Found")
+                .setMessage("Please download the 'DETR_ResNet_dc5.nnc' file from AI Studio Farm and place it in the assets folder. Refer to the README file for the correct file path.")
+                .setCancelable(false)
+                .setPositiveButton("OK") { _, _ ->
+                    if (context is android.app.Activity) {
+                        context.finish()
+                    } else {
+                        Log.e("ModelExecutor", "Context is not an Activity, cannot finish()")
+                    }
+                }
+                .show()
         }
     }
 
