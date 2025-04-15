@@ -17,7 +17,7 @@ Each sample application entry provides the details of the functionality of the s
 ***
 
 ### Image Classification In Android
-This document explains Android Sample Application operates using the [DenseNet121](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/118f8cc6-f251-43b7-b8c2-ec77a3c50fda) model optimized for Exynos hardware.
+This document explains Android Sample Application operates using the [DenseNet121](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/118f8cc6-f251-43b7-b8c2-ec77a3c50fda) model optimized for Exynos hardware.
 
 #### Functionality
 This application classifies objects in images that are either from stored image files or those captured through a camera.
@@ -45,7 +45,7 @@ Perform the following steps to modify the model used in the sample application:
 ***
 
 ### Object Detection In Android
-This document describes a method to operate Android sample application using the [DETR_ResNet50_dc5](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/a631921e-dc8b-46cb-ac17-d23c5a54db26) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [DETR_ResNet50_dc5](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/a631921e-dc8b-46cb-ac17-d23c5a54db26) model that is optimized for Exynos hardware.
 
 #### Functionality
 This sample application identifies objects in images that are either from stored image files or those captured through the camera.
@@ -72,7 +72,7 @@ Perform the following steps to modify the model used in the sample application:
 4.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
 
 ### Semantic Segmentation In Android
-This document describes a method to operate Android sample application operates using the [DDRNet23_slim](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/994cb06f-b886-4fb6-b8e9-8b4efdc8baee) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application operates using the [DDRNet23_slim](https://soc-developer.semiconductor.samsung.com/kr/solution/ai/models/detail/994cb06f-b886-4fb6-b8e9-8b4efdc8baee) model that is optimized for Exynos hardware.
 
 #### Functionality
 This sample application provides semantic segmentation results for images that are either from stored image files or those captured through the camera.
@@ -99,7 +99,7 @@ Perform the following steps to modify the model used in the sample application:
 ***
 
 ### Pose Estimation In Android
-This document describes a method to operate Android sample application using the [Posenet_MobileNet](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/f40473cb-a6e6-42a3-a50a-daf428273eab) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Posenet_MobileNet](https://soc-developer.semiconductor.samsung.com/kr/solution/ai/models/detail/f40473cb-a6e6-42a3-a50a-daf428273eab) model that is optimized for Exynos hardware.
 
 #### Functionality
 This application detects key points in images that are either from stored image files or those captured through the camera and automatically measures joint positions.
@@ -126,7 +126,7 @@ Perform the following steps to modify the model used in the sample application:
 ***
 
 ### Image Enhancement In Android
-This document describes a method to operate Android sample application using the [Real-ESRGAN-General-x4v3](https://prd.ai-studio-farm.com/global/solution/ai/models/detail/36ad7134-5621-48b2-8ddf-e4889417f6ef) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Real-ESRGAN-General-x4v3](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/36ad7134-5621-48b2-8ddf-e4889417f6ef) model that is optimized for Exynos hardware.
 
 #### Functionality
 This application enhances the low-light quality of images that are either from stored image files or those captured through the camera.
@@ -153,7 +153,7 @@ Perform the following steps to modify the model used in the sample application:
 ***
 
 ### Depth Estimation In Android
-This document describes a method to operate Android sample application operates using the [MiDaS_v2](https://prd.ai-studio-farm.com/kr/solution/ai/models/detail/73bcae23-4a07-4df9-b0c5-80504427c11c) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application operates using the [MiDaS_v2](https://soc-developer.semiconductor.samsung.com/kr/solution/ai/models/detail/73bcae23-4a07-4df9-b0c5-80504427c11c) model that is optimized for Exynos hardware.
 
 #### Functionality
 This application receives input that are either from an image file or those captured through a camera.
@@ -167,7 +167,7 @@ The sample is available in the `enn-sdk-samples-2400/depth-estimation` directory
 To utilize the sample application:
 1.	Download or clone the sample application from this repository.
 2.  If there is no available device to run the application, you can use the real devices provided in the Device Farm.
-    For guidance on connecting a device to Android Studio, refer to the [Documentation](https://prd.ai-studio-farm.com/global/development/enn-sdk/document/documentation "...") menu under AI Studio Farm → 2. Device Remote Control → 2-7 ADB Proxy Guide.
+    For guidance on connecting a device to Android Studio, refer to the [Documentation](https://soc-developer.semiconductor.samsung.com/global/development/enn-sdk/document/documentation "...") menu under AI Studio Farm → 2. Device Remote Control → 2-7 ADB Proxy Guide.
 3.  Push a sample image for testing to the following path using adb push.
 4.  After confirming a proper connection with Device Farm, select Tools -> Device Manager in Android Studio.
 5.  Next that check if the physical device is properly connected.## Getting Started
