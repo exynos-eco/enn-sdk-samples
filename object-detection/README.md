@@ -6,6 +6,10 @@ This sample application identifies objects in images that are either from stored
 The detected objects are highlighted with bounding boxes, and the label and score of each object are displayed. 
 Additionally, the inference time is displayed at the bottom of the application interface.
 
+<p align="center" width="100%">
+  <img src="object-detection.png" alt="App Classification UI" height="400"/>
+</p>
+
 ## Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.

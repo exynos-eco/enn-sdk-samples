@@ -5,6 +5,10 @@ This document describes a method to operate Android sample application operates 
 This sample application provides semantic segmentation results for images that are either from stored image files or those captured through the camera. 
 Each pixel of the segmented object is overlaid with a color corresponding to its label, thereby offering a visual representation of the classification.
 
+<p align="center" width="100%">
+  <img src="semantic-segmentation.png" alt="App Classification UI" height="400"/>
+</p>
+
 ## Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
