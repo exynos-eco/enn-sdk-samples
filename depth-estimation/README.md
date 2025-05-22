@@ -6,6 +6,10 @@ This application receives input that are either from an image file or those capt
 A color representing the estimated distance is overlaid on each pixel that, provides a visual representation of depth.
 Additionally, the inference time is displayed at the bottom of the application interface.
 
+<p align="center" width="100%">
+  <img src="depth-estimation.png" alt="App Classification UI" height="400"/>
+</p>
+
 ## Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
