@@ -25,7 +25,7 @@ Perform the following steps to modify the model used in the sample application:
 3.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
 
 ## Compatible AI Models
-Currently there are no supported models.
+Currently there are no supported models.  
 **Note:** All models that are listed here are not individually tested with this application.  
 [ESPNet](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/d1cc15da-7239-4b84-834a-19fbd632c4fa)  
 [FCN_ResNet50](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/4f98c13b-560f-4b24-b938-dac70cbd3239)  
