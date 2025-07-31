@@ -13,7 +13,7 @@ Additionally, the inference time is displayed at the bottom of the application i
 ## Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm. 
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
     For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
@@ -27,4 +27,5 @@ Perform the following steps to modify the model used in the sample application:
 
 ## Compatible AI Models
 Currently there are no supported models.  
-Later, if any new models are registered and are expected to be compatible with the sample application, we will update them here.
+**Note:** All models that are listed here are not individually tested with this application.  
+[MegaDepth](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/b3b19a15-1d46-4e83-adbd-8ebaa5522e5c)  

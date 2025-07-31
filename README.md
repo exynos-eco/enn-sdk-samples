@@ -1,4 +1,4 @@
-# ENN SDK Samples 2400
+# Exynos 2400 Sample Code
 
 ## Introduction
 |Sample Name| Description                                                                                              |
@@ -24,12 +24,12 @@ This application classifies objects in images that are either from stored image 
 The classified items, corresponding scores, and inference time are displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/image-classification` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples-2400/image-classification` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
     For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
@@ -53,12 +53,12 @@ The detected objects are highlighted with bounding boxes, and the label and scor
 Additionally, the inference time is displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/object-detection` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples-2400/object-detection` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
     For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
@@ -79,12 +79,12 @@ This sample application provides semantic segmentation results for images that a
 Each pixel of the segmented object is overlaid with a color corresponding to its label, thereby offering a visual representation of the classification.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/semantic-segmentation` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples-2400/semantic-segmentation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
     For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
@@ -106,12 +106,12 @@ This application detects key points in images that are either from stored image 
 Additionally, the inference time is displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/pose-estimation` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples-2400/pose-estimation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
     For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
@@ -133,12 +133,12 @@ This application enhances the low-light quality of images that are either from s
 Additionally, the inference time is displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/image-enhancement` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples-2400/image-enhancement` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
     For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
@@ -161,12 +161,12 @@ A color representing the estimated distance is overlaid on each pixel that, prov
 Additionally, the inference time is displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/depth-estimation` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples-2400/depth-estimation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
 
 #### Getting Started
 To utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no available device to run the application, you can use the real devices provided in the Device Farm.
+2.  If there is no available device to run the application, you can use the real devices provided in the AI Studio Farm.
     For guidance on connecting a device to Android Studio, refer to the [Documentation](https://soc-developer.semiconductor.samsung.com/global/development/enn-sdk/document/documentation "...") menu under AI Studio Farm → 2. Device Remote Control → 2-7 ADB Proxy Guide.
 3.  Push a sample image for testing to the following path using adb push.
 4.  After confirming a proper connection with Device Farm, select Tools -> Device Manager in Android Studio.
@@ -174,7 +174,7 @@ To utilize the sample application:
 
 Perform the following steps to utilize the sample application:
 1.	Download or clone the sample application from this repository.
-2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
     For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
