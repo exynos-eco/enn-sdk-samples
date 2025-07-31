@@ -67,6 +67,11 @@ class ModelExecutor(
 
     fun process(image: Bitmap) {
         val input = preProcess(image)
+        // Show a popup when an NNC file for a different chipset is used
+        if (bufferSet == 0L) {
+            showModelDownloadPopup()
+            return
+        }
         ennMemcpyHostToDevice(bufferSet, 0, input)
 
         var inferenceTime = SystemClock.uptimeMillis()
@@ -229,15 +234,34 @@ class ModelExecutor(
             inputStream.close()
             outputStream.close()
         } catch (e: IOException) {
-            showModelDownloadPopup()
+            showModelNotFoundPopup()
+        }
+    }
+
+    private fun showModelNotFoundPopup() {
+        Handler(Looper.getMainLooper()).post {
+            AlertDialog.Builder(context)
+                .setTitle("Model File Not Found")
+                .setMessage("Please download the 'DETR_ResNet_dc5.nnc' file from AI Studio Farm and place it in the assets folder. Refer to the README file for the correct file path.")
+                .setCancelable(false)
+                .setPositiveButton("OK") { _, _ ->
+                    if (context is android.app.Activity) {
+                        context.finish()
+                    } else {
+                        Log.e("ModelExecutor", "Context is not an Activity, cannot finish()")
+                    }
+                }
+                .show()
         }
     }
 
     private fun showModelDownloadPopup() {
         Handler(Looper.getMainLooper()).post {
             AlertDialog.Builder(context)
-                .setTitle("Model File Not Found")
-                .setMessage("Please download the 'DETR_ResNet_dc5.nnc' file from AI Studio Farm and place it in the assets folder. Refer to the README file for the correct file path.")
+                .setTitle("NNC File Error")
+                .setMessage("The NNC file currently in use is not compatible with your device.\n" +
+                        "Please check your device's chipset and download the appropriate NNC file from AI Studio Farm.\n" +
+                        "Place the file in the assets folder. Refer to the README file for the exact file path.")
                 .setCancelable(false)
                 .setPositiveButton("OK") { _, _ ->
                     if (context is android.app.Activity) {

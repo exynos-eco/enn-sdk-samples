@@ -2,10 +2,14 @@
 
 package com.samsung.segmentation.executor
 
+import android.app.AlertDialog
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.Color
+import android.os.Handler
+import android.os.Looper
 import android.os.SystemClock
+import android.util.Log
 import com.samsung.segmentation.data.DataType
 import com.samsung.segmentation.data.LayerType
 import com.samsung.segmentation.data.ModelConstants
@@ -62,6 +66,11 @@ class ModelExecutor(
     fun process(image: Bitmap) {
         // Process Image to Input Byte Array
         val input = preProcess(image)
+        // Show a popup when an NNC file for a different chipset is used
+        if (bufferSet == 0L) {
+            showModelDownloadPopup()
+            return
+        }
         // Copy Input Data
         ennMemcpyHostToDevice(bufferSet, 0, input)
 
@@ -254,6 +263,25 @@ class ModelExecutor(
             outputStream.close()
         } catch (e: IOException) {
             e.printStackTrace()
+        }
+    }
+
+    private fun showModelDownloadPopup() {
+        Handler(Looper.getMainLooper()).post {
+            AlertDialog.Builder(context)
+                .setTitle("NNC File Error")
+                .setMessage("The NNC file currently in use is not compatible with your device.\n" +
+                        "Please check your device's chipset and download the appropriate NNC file from AI Studio Farm.\n" +
+                        "Place the file in the assets folder. Refer to the README file for the exact file path.")
+                .setCancelable(false)
+                .setPositiveButton("OK") { _, _ ->
+                    if (context is android.app.Activity) {
+                        context.finish()
+                    } else {
+                        Log.e("ModelExecutor", "Context is not an Activity, cannot finish()")
+                    }
+                }
+                .show()
         }
     }
 
