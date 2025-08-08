@@ -1,2 +1,2 @@
-
+object-detection/app/src/main/assets/DETR_ResNet50_dc5.nnc filter=lfs diff=lfs merge=lfs -text
 semantic-segmentation/*/app/src/main/assets/*.nnc filter=lfs diff=lfs merge=lfs -text
