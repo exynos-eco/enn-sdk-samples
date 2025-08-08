@@ -1,1 +1,1 @@
-
+object-detection/app/src/main/assets/DETR_ResNet50_dc5.nnc filter=lfs diff=lfs merge=lfs -text
