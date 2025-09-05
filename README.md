@@ -1,4 +1,4 @@
-# Exynos 2400 Sample Code
+# Exynos Devices Sample Code
 
 ## Introduction
 |Sample Name| Description                                                                                              |
@@ -24,7 +24,7 @@ This application classifies objects in images that are either from stored image 
 The classified items, corresponding scores, and inference time are displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/image-classification` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples/image-classification` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
@@ -53,7 +53,7 @@ The detected objects are highlighted with bounding boxes, and the label and scor
 Additionally, the inference time is displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/object-detection` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples/object-detection` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
@@ -79,7 +79,7 @@ This sample application provides semantic segmentation results for images that a
 Each pixel of the segmented object is overlaid with a color corresponding to its label, thereby offering a visual representation of the classification.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/semantic-segmentation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples/semantic-segmentation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
@@ -106,7 +106,7 @@ This application detects key points in images that are either from stored image 
 Additionally, the inference time is displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/pose-estimation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples/pose-estimation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
@@ -133,7 +133,7 @@ This application enhances the low-light quality of images that are either from s
 Additionally, the inference time is displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/image-enhancement` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples/image-enhancement` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples) repository.
 
 #### Getting Started
 Perform the following steps to utilize the sample application:
@@ -161,7 +161,7 @@ A color representing the estimated distance is overlaid on each pixel that, prov
 Additionally, the inference time is displayed at the bottom of the application interface.
 
 #### Location
-The sample is available in the `enn-sdk-samples-2400/depth-estimation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples-2400) repository.
+The sample is available in the `enn-sdk-samples/depth-estimation` directory within the [Github](https://github.com/SamsungDS/exynos-eco/tree/main/enn-sdk-samples) repository.
 
 #### Getting Started
 To utilize the sample application:
