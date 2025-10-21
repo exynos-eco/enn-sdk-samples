@@ -39,12 +39,18 @@ class ModelExecutor(
     private external fun ennExecute(modelId: Long)
     private external fun ennMemcpyHostToDevice(bufferSet: Long, layerNumber: Int, data: ByteArray)
     private external fun ennMemcpyDeviceToHost(bufferSet: Long, layerNumber: Int): ByteArray
-    private external fun printLayerOutputs(bufferSet: Long, layerNumber: Int)
 
     private var modelId: Long = 0
     private var bufferSet: Long = 0
     private var nInBuffer: Int = 0
     private var nOutBuffer: Int = 0
+
+    private data class OutputPick(
+        val heatmapIdx: Int,
+        val offsetIdx: Int,
+        val heatmapBytes: ByteArray,
+        val offsetBytes: ByteArray
+    )
 
     init {
         System.loadLibrary("enn_jni")
@@ -56,11 +62,9 @@ class ModelExecutor(
         // Initialize ENN
         ennInitialize()
 
-        // Open model
         val fileAbsoluteDirectory = File(context.filesDir, MODEL_NAME).absolutePath
         modelId = ennOpenModel(fileAbsoluteDirectory)
 
-        // Allocate all required buffers
         val bufferSetInfo = ennAllocateAllBuffers(modelId)
         bufferSet = bufferSetInfo.buffer_set
         nInBuffer = bufferSetInfo.n_in_buf
@@ -68,34 +72,30 @@ class ModelExecutor(
     }
 
     fun process(image: Bitmap) {
-        // Process Image to Input Byte Array
         val input = preProcess(image)
-        // Show a popup when an NNC file for a different chipset is used
+
         if (bufferSet == 0L) {
             showModelDownloadPopup()
             return
         }
-        // Copy Input Data
         ennMemcpyHostToDevice(bufferSet, 0, input)
-        var inferenceTime = SystemClock.uptimeMillis()
-        // Model execute
+
+        var t = SystemClock.uptimeMillis()
         ennExecute(modelId)
-        inferenceTime = SystemClock.uptimeMillis() - inferenceTime
-        // Copy Output Data
-        val heatmapModelOutput = ennMemcpyDeviceToHost(bufferSet, 4)
-        val offsetModelOutput = ennMemcpyDeviceToHost(bufferSet, 3)
+        t = SystemClock.uptimeMillis() - t
+
+        val pick = resolveOutputsDynamically()
+        val heatmapModelOutput = pick.heatmapBytes
+        val offsetModelOutput  = pick.offsetBytes
 
         executorListener?.onResults(
-            postProcess(heatmapModelOutput, offsetModelOutput), inferenceTime
+            postProcess(heatmapModelOutput, offsetModelOutput), t
         )
     }
 
     fun closeENN() {
-        // Release a buffer array
         ennReleaseBuffers(bufferSet, nInBuffer + nOutBuffer)
-        // Close a Model and Free all resources
         ennCloseModel(modelId)
-        // Destructs ENN process
         ennDeinitialize()
     }
 
@@ -117,7 +117,6 @@ class ModelExecutor(
                 throw IllegalArgumentException("Unsupported input data type: ${INPUT_DATA_TYPE}")
             }
         }
-
         return byteArray
     }
 
@@ -162,8 +161,6 @@ class ModelExecutor(
         }.maxByOrNull { it.first }?.let { Pair(it.second, it.third) }
             ?: Pair(0, 0)
 
-
-
     private fun computeCoordinatesAndConfidence(
         keypointPositions: Array<Pair<Int, Int>>,
         offsets: Array<Array<FloatArray>>,
@@ -183,14 +180,14 @@ class ModelExecutor(
                 axisPosition = x,
                 axisLength = width,
                 imageSize = INPUT_SIZE_W,
-                offset = offsets[x][y][idx + numKeypoints],  //  x-offset is  (idx + 17)
+                offset = offsets[x][y][idx + numKeypoints],
                 cropDimension = cropDimensions.second
             )
             yCoords[idx] = computeCoordinate(
                 axisPosition = y,
                 axisLength = height,
                 imageSize = INPUT_SIZE_H,
-                offset = offsets[x][y][idx],  //  y-offset is idx
+                offset = offsets[x][y][idx],
                 cropDimension = cropDimensions.first
             )
 
@@ -207,9 +204,9 @@ class ModelExecutor(
     }
 
     private fun computeCoordinate(
-        axisPosition: Int, // heatmap grid value
-        axisLength: Int, // heatmap grid size
-        imageSize: Int, // image size //
+        axisPosition: Int,
+        axisLength: Int,
+        imageSize: Int,
         offset: Float,
         cropDimension: Float
     ): Float {
@@ -302,8 +299,6 @@ class ModelExecutor(
                     / INPUT_CONVERSION_SCALE)
 
         }
-
-
         return floatArray
     }
 
@@ -322,7 +317,6 @@ class ModelExecutor(
         }
     }
 
-
     private fun convertOutputByteToFloatArray(
         modelOutput: ByteArray,
         dataType: DataType
@@ -339,7 +333,6 @@ class ModelExecutor(
                 floatBuffer.get(floatArray)
                 floatArray
             }
-
             else -> {
                 throw IllegalArgumentException("Unsupported output data type: ${dataType}")
             }
@@ -387,6 +380,31 @@ class ModelExecutor(
         }
     }
 
+    private fun resolveOutputsDynamically(): OutputPick {
+        val total = nInBuffer + nOutBuffer
+        val startIdx = 1
+        val endIdx = total - 1
+        val candidates = mutableListOf<Triple<Int, Int, ByteArray>>()
+
+        for (idx in startIdx..endIdx) {
+            val bytes = ennMemcpyDeviceToHost(bufferSet, idx)
+            val elemCount = bytes.size / Float.SIZE_BYTES
+            candidates += Triple(idx, elemCount, bytes)
+        }
+        val offsetTrip = candidates.firstOrNull { it.second == ELEM_OFFSET }
+            ?: error("OFFSET tensor (34x33x17) not found among outputs.")
+
+        val heatmapTrips = candidates.filter { it.second == ELEM_HEATMAP }
+        require(heatmapTrips.isNotEmpty()) { "HEATMAP tensor (17x33x17) not found among outputs." }
+        val chosenHeatmap = heatmapTrips.firstOrNull { it.first > offsetTrip.first } ?: heatmapTrips.first()
+        return OutputPick(
+            heatmapIdx = chosenHeatmap.first,
+            offsetIdx = offsetTrip.first,
+            heatmapBytes = chosenHeatmap.third,
+            offsetBytes = offsetTrip.third
+        )
+    }
+
     interface ExecutorListener {
         fun onError(error: String)
         fun onResults(
@@ -418,5 +436,9 @@ class ModelExecutor(
         private const val OFFSET_SIZE_C = ModelConstants.OFFSET_SIZE_C
         private const val OFFSET_SIZE_H = ModelConstants.OFFSET_SIZE_H
         private const val OFFSET_SIZE_W = ModelConstants.OFFSET_SIZE_W
+
+        private const val ELEM_HEATMAP = 17 * 33 * 17
+        private const val ELEM_OFFSET  = 34 * 33 * 17
+        private const val ELEM_SKIP    = 32 * 33 * 17
     }
 }
