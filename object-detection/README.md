@@ -1,5 +1,5 @@
 # Object Detection In Android
-This document describes a method to operate Android sample application using the [DETR_ResNet50_dc5](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/a631921e-dc8b-46cb-ac17-d23c5a54db26) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [DETR_ResNet50_dc5](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/DETR_ResNet50_dc5) model that is optimized for Exynos hardware.
 
 ## Functionality
 This sample application identifies objects in images that are either from stored image files or those captured through the camera.
@@ -29,9 +29,12 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Below is a list of models expected to be compatible with the sample application.  
 **Note:** All models that are listed here are not individually tested with this application.  
-[DETR_ResNet101_dc5](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/9eb3e0fd-4478-49e4-b631-5941ce62d16c)  
-[YOLOX_l](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/82ac3ced-738f-419e-a37c-fbab1fd6c3ae)  
-[YOLOX_m](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/7d44174f-e815-48c3-8ef1-4f7c8acac522)  
-[YOLOX_s](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/89bd4a9e-ffa4-420a-a9d7-25f16b7942f1)  
-[YOLOX_tiny](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/e9f2d207-0eaa-468b-bdd1-c67333545404)  
-[YOLOX_nano](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/97a88b8e-f9ab-44e3-a145-20cfe90cae41)  
+[DETR_ResNet101_dc5](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/DETR_ResNet101_dc5)  
+[YOLOX_l](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YOLOX_l)  
+[YOLOX_m](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YOLOX_m)  
+[YOLOX_s](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YOLOX_s)  
+[YOLOX_tiny](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YOLOX_tiny)  
+[YOLOX_nano](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YOLOX_nano)  
+[NanoDet_EfficientLite0](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/NanoDet_EfficientLite0)  
+[NanoDet_EfficientLite1](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/NanoDet_EfficientLite1)  
+[NanoDet_EfficientLite2](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/NanoDet_EfficientLite2)  

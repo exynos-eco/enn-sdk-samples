@@ -1,5 +1,5 @@
 # Pose Estimation In Android
-This document describes a method to operate Android sample application using the [Posenet_MobileNet](https://soc-developer.semiconductor.samsung.com/kr/solution/ai/models/detail/f40473cb-a6e6-42a3-a50a-daf428273eab) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Posenet_MobileNet](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/PoseNet_MobileNet) model that is optimized for Exynos hardware.
 
 ## Functionality
 This application detects key points in images that are either from stored image files or those captured through the camera and automatically measures joint positions.
@@ -27,6 +27,6 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Currently there are no supported models.  
 **Note:** All models that are listed here are not individually tested with this application.  
-[HRNet_Pose](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/d5d0a574-d865-48e9-a7be-d3754d03e75c)  
-[LightWeightPose](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/2effd48f-c476-4986-92ad-b3aead7dc042)
+[HRNet_Pose](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/HRNet_Pose)  
+[LightWeightPose](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/LightWeightPose)
 

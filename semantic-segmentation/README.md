@@ -1,5 +1,5 @@
 # Segmentation In Android
-This document describes a method to operate Android sample application operates using the [DDRNet23_slim](https://soc-developer.semiconductor.samsung.com/kr/solution/ai/models/detail/994cb06f-b886-4fb6-b8e9-8b4efdc8baee) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application operates using the [DDRNet23_slim](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/DDRNet23_slim) model that is optimized for Exynos hardware.
 
 ## Functionality
 This sample application provides semantic segmentation results for images that are either from stored image files or those captured through the camera.
@@ -27,6 +27,8 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Currently there are no supported models.  
 **Note:** All models that are listed here are not individually tested with this application.  
-[ESPNet](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/d1cc15da-7239-4b84-834a-19fbd632c4fa)  
-[FCN_ResNet50](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/4f98c13b-560f-4b24-b938-dac70cbd3239)  
-[UNet_Brain_Segmentation](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/04656d4c-2814-4d11-919e-e3d806bdda83)  
+[ESPNet](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/ESPNet)  
+[FCN_ResNet50](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/FCN_ResNet50)  
+[UNet_Brain_Segmentation](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/UNet_Brain_Segmentation)  
+[HrNet_Segmentation](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/HrNet_Segmentation)  
+[BiSeNet_v2](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/BiSeNet_v2)  

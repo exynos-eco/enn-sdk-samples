@@ -1,5 +1,5 @@
 # Depth Estimation In Android
-This document describes a method to operate Android sample application operates using the [MiDaS_v2](https://soc-developer.semiconductor.samsung.com/kr/solution/ai/models/detail/73bcae23-4a07-4df9-b0c5-80504427c11c) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application operates using the [MiDaS_v2](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/MiDaS_v2) model that is optimized for Exynos hardware.
 
 ## Functionality
 This application receives input that are either from an image file or those captured through a camera.
@@ -28,4 +28,5 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Currently there are no supported models.  
 **Note:** All models that are listed here are not individually tested with this application.  
-[MegaDepth](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/b3b19a15-1d46-4e83-adbd-8ebaa5522e5c)  
+[MegaDepth](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/MegaDepth)  
+[FastDepth](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/FastDepth)  
