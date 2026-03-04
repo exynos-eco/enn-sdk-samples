@@ -8,9 +8,9 @@
 | [Semantic Segmentation In Android](#semantic-segmentation-in-android) | Sample Android application to demonstrate the execution of `DDRNet23_slim` model with ENN SDK            |
 | [Pose Estimation In Android](#pose-estimation-in-android)             | Sample Android application to demonstrate the execution of `PoseNet_MobileNet` model with ENN SDK        |
 | [Image Enhancement In Android](#image-enhancement-in-android)         | Sample Android application to demonstrate the execution of `Real-ESRGAN-General-x4v3` model with ENN SDK |
-| [Depth Estimation In Andriod](#depth-estimation-in-andriod)           | Sample Android application to demonstrate the execution of `MiDaS_v2` model with ENN SDK                 |
-| [Gaze Estimation In Andriod](#gaze-estimation-in-andriod)             | Sample Android application to demonstrate the execution of `Gaze_MobileNetV2` model with ENN SDK         |
-| [Video Classification In Andriod](#video-classification-in-andriod)   | Sample Android application to demonstrate the execution of `TSN_ResNet50` model with ENN SDK         |  |
+| [Depth Estimation In Andriod](#depth-estimation-in-android)           | Sample Android application to demonstrate the execution of `MiDaS_v2` model with ENN SDK                 |
+| [Gaze Estimation In Andriod](#gaze-estimation-in-android)             | Sample Android application to demonstrate the execution of `Gaze_MobileNetV2` model with ENN SDK         |
+| [Video Classification In Andriod](#video-classification-in-android)   | Sample Android application to demonstrate the execution of `TSN_ResNet50` model with ENN SDK         |  |
 ## Android (Kotlin) Samples
 This section provides an overview of Android (Kotlin) sample applications.
 Each sample application entry provides the details of the functionality of the sample application, its location, and instructions for running it.
