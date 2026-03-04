@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/view_finder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/detected_block0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="0.6"/>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detected_block0"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_box"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/detected_block1"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toBottomOf="@id/view_finder"
+
+        >
+
+        <TextView
+            android:id="@+id/detected_item0"
+            style="@style/AutoResizeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/detected_item0_gauge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Apple" />
+
+        <ProgressBar
+            android:id="@+id/detected_item0_gauge"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="1000"
+            android:progress="1000"
+            android:progressDrawable="@drawable/guage_progress_drawble"
+            android:progressTint="#70309F"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/detected_item0_score"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detected_item0" />
+
+        <TextView
+            android:id="@+id/detected_item0_score"
+            style="@style/AutoResizeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/detected_item0_gauge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/detected_item0_gauge"
+            app:layout_constraintTop_toTopOf="@id/detected_item0_gauge"
+            app:layout_constraintWidth_percent="0.15"
+            tools:text="0.50000" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detected_block1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_box"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/detected_block2"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toBottomOf="@id/detected_block0">
+
+        <TextView
+            android:id="@+id/detected_item1"
+            style="@style/AutoResizeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/detected_item1_gauge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Apple" />
+
+        <ProgressBar
+            android:id="@+id/detected_item1_gauge"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="1000"
+            android:progress="1000"
+            android:progressDrawable="@drawable/guage_progress_drawble"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/detected_item1_score"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detected_item1" />
+
+        <TextView
+            android:id="@+id/detected_item1_score"
+            style="@style/AutoResizeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/detected_item1_gauge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/detected_item1_gauge"
+            app:layout_constraintTop_toTopOf="@id/detected_item1_gauge"
+            app:layout_constraintWidth_percent="0.15"
+            tools:text="0.50000" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detected_block2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/background_box"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toTopOf="@id/processData"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintTop_toBottomOf="@id/detected_block1">
+
+        <TextView
+            android:id="@+id/detected_item2"
+            style="@style/AutoResizeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center_vertical"
+
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/detected_item2_gauge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Apple" />
+
+        <ProgressBar
+            android:id="@+id/detected_item2_gauge"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:max="1000"
+            android:progress="1000"
+            android:progressDrawable="@drawable/guage_progress_drawble"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/detected_item2_score"
+            app:layout_constraintHeight_percent="0.4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detected_item2" />
+
+        <TextView
+            android:id="@+id/detected_item2_score"
+            style="@style/AutoResizeText"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:textAlignment="viewEnd"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/detected_item2_gauge"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/detected_item2_gauge"
+            app:layout_constraintTop_toTopOf="@id/detected_item2_gauge"
+            app:layout_constraintWidth_percent="0.15"
+            tools:text="0.50000" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    <include
+        android:id="@+id/processData"
+        layout="@layout/enn_info"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
