@@ -17,7 +17,7 @@ Perform the following steps to utilize the sample application:
     For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
-5.  Run the depth estimation project from the sample applications obtained through git clone in Android Studio.
+5.  Run the object detection project from the sample applications obtained through git clone in Android Studio.
 6.  Upload the image data for inference and execute the application.
 
 Perform the following steps to modify the model used in the sample application:
