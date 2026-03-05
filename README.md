@@ -10,7 +10,8 @@
 | [Image Enhancement In Android](#image-enhancement-in-android)         | Sample Android application to demonstrate the execution of `Real-ESRGAN-General-x4v3` model with ENN SDK |
 | [Depth Estimation In Andriod](#depth-estimation-in-android)           | Sample Android application to demonstrate the execution of `MiDaS_v2` model with ENN SDK                 |
 | [Gaze Estimation In Andriod](#gaze-estimation-in-android)             | Sample Android application to demonstrate the execution of `Gaze_MobileNetV2` model with ENN SDK         |
-| [Video Classification In Andriod](#video-classification-in-android)   | Sample Android application to demonstrate the execution of `TSN_ResNet50` model with ENN SDK         |  |
+| [Video Classification In Andriod](#video-classification-in-android)   | Sample Android application to demonstrate the execution of `TSN_ResNet50` model with ENN SDK             |
+| [Audio Classification In Andriod](#audio-classification-in-android)   | Sample Android application to demonstrate the execution of `YamNet` model with ENN SDK                   ||
 ## Android (Kotlin) Samples
 This section provides an overview of Android (Kotlin) sample applications.
 Each sample application entry provides the details of the functionality of the sample application, its location, and instructions for running it.
@@ -234,6 +235,33 @@ Perform the following steps to utilize the sample application:
 3.  Use adb push command to push a sample image to the following path for testing.
 4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
 5.  Run the video classification project from the sample applications obtained through git clone in Android Studio.
+6.  Upload the image data for inference and execute the application.
+
+Perform the following steps to modify the model used in the sample application:
+1.	Copy the desired model file to the `assets` directory of the project.
+2.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
+3.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
+
+***
+
+### Audio Classification In Android
+This document describes a method to operate Android sample application using the [YamNet](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1) model that is optimized for Exynos hardware.
+
+#### Functionality
+This application classifies sounds from audio/video files or real-time microphone input.
+The classified items, corresponding scores, and inference time are displayed at the bottom of the application interface.
+
+#### Location
+The sample is available in the `enn-sdk-samples/audio-classification` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples) repository.
+
+#### Getting Started
+Perform the following steps to utilize the sample application:
+1.	Download or clone the sample application from this repository.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
+    For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
+3.  Use adb push command to push a sample image to the following path for testing.
+4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
+5.  Run the audio classification project from the sample applications obtained through git clone in Android Studio.
 6.  Upload the image data for inference and execute the application.
 
 Perform the following steps to modify the model used in the sample application:

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/selectFragment">
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.samsung.audioclassification.fragments.CameraFragment"
+        android:label="CameraFragment" />
+    <fragment
+        android:id="@+id/selectFragment"
+        android:name="com.samsung.audioclassification.fragments.SelectFragment"
+        android:label="fragment_select"
+        tools:layout="@layout/fragment_select" >
+        <action
+            android:id="@+id/action_selectFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+        <action
+            android:id="@+id/action_selectFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+        <action
+            android:id="@+id/action_selectFragment_to_videoFragment"
+            app:destination="@id/videoFragment" />
+        <action
+            android:id="@+id/action_selectFragment_to_liveAudioFragment"
+            app:destination="@id/liveAudioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.samsung.audioclassification.fragments.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" />
+    <fragment
+        android:id="@+id/videoFragment"
+        android:name="com.samsung.audioclassification.fragments.VideoFragment"
+        android:label="fragment_videmo"
+        tools:layout="@layout/fragment_video" />
+    <fragment
+        android:id="@+id/liveAudioFragment"
+        android:name="com.samsung.audioclassification.fragments.LiveAudioFragment"
+        android:label="fragment_live_audio"
+        tools:layout="@layout/fragment_live_audio" />
+</navigation>
