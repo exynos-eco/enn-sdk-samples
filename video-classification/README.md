@@ -5,7 +5,7 @@ This document describes a method to operate Android sample application using the
 This application classifies actions in videos that are selected from stored video files.
 The classified items, corresponding scores, and inference time are displayed at the bottom of the application interface.
 
-<p width="100%">
+<p align="center" width="100%">
   <img src="video-classification.png" alt="App Classification UI" height="400" />
 </p>
 
@@ -27,5 +27,10 @@ Perform the following steps to modify the model used in the sample application:
 
 ## Compatible AI Models
 Below is a list of models expected to be compatible with the sample application.  
-**Note:** All models that are listed here are not individually tested with this application.
+**Note:** All models that are listed here are not individually tested with this application.  
+[TSN_ResNet101](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
+[TSN_DenseNet161](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)   
+[TSN_MobileOneS4](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
+
+
 
