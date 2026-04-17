@@ -191,7 +191,7 @@ Perform the following steps to modify the model used in the sample application:
 ***
 
 ### Gaze Estimation In Android
-This document describes a method to operate Android sample application using the [Gaze_MobileNetV2](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Gaze_MobileNetV2](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/Gaze_MobileNetv2?tab=float&chipset=Exynos+2600) model that is optimized for Exynos hardware.
 
 #### Functionality
 The application takes input from an image file or a live camera stream. The model analyzes the face and eye regions to estimate the gaze direction of the person.
@@ -218,7 +218,7 @@ Perform the following steps to modify the model used in the sample application:
 ***
 
 ### Video Classification In Android
-This document describes a method to operate Android sample application using the [TSN_ResNet50](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [TSN_ResNet50](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/TSN_ResNet50?tab=float&chipset=Exynos+2600) model that is optimized for Exynos hardware.
 
 #### Functionality
 The application takes input from a video file or a live video stream captured through a camera. The model analyzes the video frames and predicts the category of the action or scene present in the video. 
@@ -245,7 +245,7 @@ Perform the following steps to modify the model used in the sample application:
 ***
 
 ### Audio Classification In Android
-This document describes a method to operate Android sample application using the [YamNet](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [YamNet](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YamNet?tab=float&chipset=Exynos+2600) model that is optimized for Exynos hardware.
 
 #### Functionality
 This application classifies sounds from audio/video files or real-time microphone input.

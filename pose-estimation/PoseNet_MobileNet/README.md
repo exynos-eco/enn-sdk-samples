@@ -27,6 +27,7 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Currently there are no supported models.  
 **Note:** All models that are listed here are not individually tested with this application.  
+[CentertNet_Multi_Pose](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/CentertNet_Multi_Pose?tab=float&chipset=Exynos+2600)  
 [HRNet_Pose](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/HRNet_Pose)  
 [LightWeightPose](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/LightWeightPose)
 

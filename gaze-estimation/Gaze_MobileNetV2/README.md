@@ -1,5 +1,5 @@
 # Gaze Estimation In Android
-This document describes a method to operate Android sample application using the [Gaze_MobileNetV2](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1) model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [Gaze_MobileNetV2](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/Gaze_MobileNetv2?tab=float&chipset=Exynos+2600) model that is optimized for Exynos hardware.
 
 ## Functionality
 The application takes input from an image file or a live camera stream. The model analyzes the face and eye regions to estimate the gaze direction of the person.
@@ -28,9 +28,9 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Below is a list of models expected to be compatible with the sample application.  
 **Note:** All models that are listed here are not individually tested with this application.  
-[Gaze_ResNet18](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
-[Gaze_ResNet34](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
-[Gaze_ResNet50](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)    
-[L2CSNet](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
+[Gaze_ResNet18](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/Gaze_ResNet18?tab=float&chipset=Exynos+2600)  
+[Gaze_ResNet34](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/Gaze_ResNet34?tab=float&chipset=Exynos+2600)  
+[Gaze_ResNet50](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/Gaze_ResNet50?tab=float&chipset=Exynos+2600)    
+[L2CSNet](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/L2CSNet?tab=float&chipset=Exynos+2600)  
 
 

@@ -32,3 +32,4 @@ Currently there are no supported models.
 [UNet_Brain_Segmentation](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/UNet_Brain_Segmentation)
 [BiSeNet_v2](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/BiSeNet_v2)  
 [DDRNet23_slim](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/DDRNet23_slim)  
+[MSeg_Semantic](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/MSeg_Semantic?tab=float&chipset=Exynos+2600)  

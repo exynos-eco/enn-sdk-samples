@@ -29,7 +29,12 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Below is a list of models expected to be compatible with the sample application.  
 **Note:** All models that are listed here are not individually tested with this application.  
+[CenterNet_Detection](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/CenterNet_Detection?tab=float&chipset=Exynos+2600)  
 [DETR_ResNet101_dc5](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/DETR_ResNet101_dc5)  
+[FoveaBox_R50_1x](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/FoveaBox_R50_1x?tab=float&chipset=Exynos+2600)  
+[FoveaBox_R50_2x](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/FoveaBox_R50_2x?tab=float&chipset=Exynos+2600)  
+[FoveaBox_R101_1x](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/FoveaBox_R101_1x?tab=float&chipset=Exynos+2600)  
+[FoveaBox_R101_2x](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/FoveaBox_R101_2x?tab=float&chipset=Exynos+2600)  
 [YOLOX_l](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YOLOX_l)  
 [YOLOX_m](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YOLOX_m)  
 [YOLOX_s](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YOLOX_s)  

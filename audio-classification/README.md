@@ -1,5 +1,5 @@
 # Audio Classification In Android
-This document describes a method to operate Android sample application using the [YAMNet]() model that is optimized for Exynos hardware.
+This document describes a method to operate Android sample application using the [YAMNet](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/YamNet?tab=float&chipset=Exynos+2600) model that is optimized for Exynos hardware.
 
 ## Functionality
 This application classifies sounds from audio/video files or real-time microphone input.
@@ -28,10 +28,10 @@ Perform the following steps to modify the model used in the sample application:
 ## Compatible AI Models
 Below is a list of models expected to be compatible with the sample application.  
 **Note:** All models that are listed here are not individually tested with this application.  
-[EfficientAT_MN10](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
-[EfficientAT_MN20](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
-[EfficientAT_MN30](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
-[EfficientAT_MN40](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1)  
+[EfficientAT_MN10](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/EfficientAT_MN10?tab=float&chipset=Exynos+2600)  
+[EfficientAT_MN20](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/EfficientAT_MN20?tab=float&chipset=Exynos+2600)  
+[EfficientAT_MN30](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/EfficientAT_MN30?tab=float&chipset=Exynos+2600)  
+[EfficientAT_MN40](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/EfficientAT_MN40?tab=float&chipset=Exynos+2600)  
 
 
 
