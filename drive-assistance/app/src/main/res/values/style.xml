@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="AutoResizeText">
+        <item name="android:autoSizeTextType">uniform</item>
+        <item name="android:autoSizeMinTextSize">16sp</item>
+        <item name="android:autoSizeMaxTextSize">24sp</item>
+        <item name="android:autoSizeStepGranularity">1sp</item>
+    </style>
+
+</resources>

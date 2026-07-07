@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_gray"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/subTitleText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/subTitleText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toTopOf="@id/buttonRow"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleText" />
+
+    <LinearLayout
+        android:id="@+id/buttonRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/subTitleText">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginEnd="24dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="Select image"
+            android:focusable="true"
+            android:padding="18dp"
+            android:src="@drawable/baseline_image_24" />
+
+        <ImageButton
+            android:id="@+id/cameraButton"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="?android:selectableItemBackground"
+            android:clickable="true"
+            android:contentDescription="Open camera"
+            android:focusable="true"
+            android:padding="18dp"
+            android:src="@drawable/baseline_photo_camera_24" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
