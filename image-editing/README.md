@@ -30,6 +30,16 @@ Perform the following steps to utilize the sample application:
 7. Draw a mask over the object or region to remove.
 8. Press PROCESS to perform image inpainting.
 
+## Model Preparation
+
+> **Note**
+>
+> The LaMa-Dilated NNC model is not included in this repository because it exceeds GitHub's file size limit.
+>
+> Download the LaMa-Dilated NNC model from the Exynos Developer Society, then place it in:
+>
+> `image-editing/app/src/main/assets/LaMa_Dilated.nnc`
+
 Perform the following steps to modify the model used in the sample application:
 1.	Copy the desired model file to the `assets` directory of the project.
 2.	Copy the corresponding label text file to the `assets` directory.
