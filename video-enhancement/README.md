@@ -20,7 +20,7 @@ This application performs **video frame interpolation** by generating an interme
 
 <tr>
 <td colspan="2" align="center">
-<img src="result.gif" width="560"/><br>
+<img src="result.gif" width="400"/><br>
 <b>Interpolated Result</b>
 </td>
 </tr>
