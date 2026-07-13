@@ -1,4 +1,4 @@
-# Object Detection In Android
+# Image-To-Text In Android
 This document describes a method to operate Android sample application using the [EasyOCR](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1&models-categoryId=7bdcccc8-5584-4a06-bec6-cc3293e05cf1) model that is optimized for Exynos hardware.
 
 ## Functionality
