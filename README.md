@@ -11,7 +11,11 @@
 | [Depth Estimation In Andriod](#depth-estimation-in-android)           | Sample Android application to demonstrate the execution of `MiDaS_v2` model with ENN SDK                 |
 | [Gaze Estimation In Andriod](#gaze-estimation-in-android)             | Sample Android application to demonstrate the execution of `Gaze_MobileNetV2` model with ENN SDK         |
 | [Video Classification In Andriod](#video-classification-in-android)   | Sample Android application to demonstrate the execution of `TSN_ResNet50` model with ENN SDK             |
-| [Audio Classification In Andriod](#audio-classification-in-android)   | Sample Android application to demonstrate the execution of `YamNet` model with ENN SDK                   ||
+| [Audio Classification In Andriod](#audio-classification-in-android)   | Sample Android application to demonstrate the execution of `YamNet` model with ENN SDK                   |
+| [Drive Assistance In Andriod](#audio-classification-in-android)       | Sample Android application to demonstrate the execution of `YoloP_320x320` model with ENN SDK            |
+| [Image Editing In Andriod](#audio-classification-in-android)          | Sample Android application to demonstrate the execution of `Lama_Dilated` model with ENN SDK             |
+| [Image to Text In Andriod](#audio-classification-in-android)          | Sample Android application to demonstrate the execution of `EasyOCR` model with ENN SDK                  |
+| [Video Enhancement In Andriod](#audio-classification-in-android)      | Sample Android application to demonstrate the execution of `RIFE` model with ENN SDK                     ||
 ## Android (Kotlin) Samples
 This section provides an overview of Android (Kotlin) sample applications.
 Each sample application entry provides the details of the functionality of the sample application, its location, and instructions for running it.
@@ -268,5 +272,133 @@ Perform the following steps to modify the model used in the sample application:
 1.	Copy the desired model file to the `assets` directory of the project.
 2.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
 3.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
+
+***
+
+### Drive Assistance In Android
+This document describes a method to operate Android sample application using the [YoloP_320x320](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1&models-categoryId=7bdcccc8-5584-4a06-bec6-cc3293e05cf1) model that is optimized for Exynos hardware.
+
+#### Functionality
+This application performs driving assistance by detecting lane markings from road images.
+The detected lane boundaries are overlaid on the input image, and the inference time is displayed at the bottom of the application interface.
+
+#### Location
+The sample is available in the `enn-sdk-samples/drive-assistance` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples) repository.
+
+#### Getting Started
+Perform the following steps to utilize the sample application:
+1.	Download or clone the sample application from this repository.
+2.  If there is no device available to run the application, you can use the actual devices provided in the Device Farm.
+    For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
+3.  Use adb push command to push a sample image to the following path for testing.
+4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
+5.  Run the drive assistance project from the sample applications obtained through git clone in Android Studio.
+6.  Upload the image data for inference and execute the application.
+
+Perform the following steps to modify the model used in the sample application:
+1.	Copy the desired model file to the `assets` directory of the project.
+2.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
+3.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
+
+***
+
+### Image Editing In Android
+This document describes a method to operate Android sample application using the [LaMa-Dilated](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1&models-categoryId=7bdcccc8-5584-4a06-bec6-cc3293e05cf1) model that is optimized for Exynos hardware.
+
+#### Functionality
+This application performs image inpainting by removing user-selected objects or regions from an input image.
+
+#### Location
+The sample is available in the `enn-sdk-samples/image-editing` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples) repository.
+
+#### Getting Started
+Perform the following steps to utilize the sample application:
+1.	Download or clone the sample application from this repository.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
+    For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
+3.  Use adb push command to push a sample image to the following path for testing.
+4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
+5.  Run the image editing project from the sample applications obtained through git clone in Android Studio.
+6.  Press LOAD to select an image.
+7. Draw a mask over the object or region to remove.
+8. Press PROCESS to perform image inpainting.
+
+#### Model Preparation
+> **Note**
+>
+> The LaMa-Dilated NNC model is not included in this repository because it exceeds GitHub's file size limit.
+>
+> Download the LaMa-Dilated NNC model from the Exynos Developer Society, then place it in:
+>
+> `image-editing/app/src/main/assets/LaMa_Dilated.nnc`
+
+Perform the following steps to modify the model used in the sample application:
+1.	Copy the desired model file to the `assets` directory of the project.
+2.	Copy the corresponding label text file to the `assets` directory.
+3.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
+4.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
+
+***
+
+### Image-To-Text In Android
+This document describes a method to operate Android sample application using the [EasyOCR](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1&models-categoryId=7bdcccc8-5584-4a06-bec6-cc3293e05cf1) model that is optimized for Exynos hardware.
+
+#### Functionality
+This sample application performs Optical Character Recognition(OCR) on images captured from the camera or loaded from the device gallery.
+
+The application consists of two neural network models: a decoder that detects text regions and a recognizer that recognizes the detected text.
+
+Detected text regions are highlighted with bounding boxes, and the recognized text is displayed.
+
+#### Location
+The sample is available in the `enn-sdk-samples/image-to-text` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples) repository.
+
+#### Getting Started
+Perform the following steps to utilize the sample application:
+1.	Download or clone the sample application from this repository.
+2.  If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
+    For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
+3.  Use adb push command to push a sample image to the following path for testing.
+4.  Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
+5.  Run the image to text project from the sample applications obtained through git clone in Android Studio.
+6.  Upload the image data for inference and execute the application.
+7.  Press **PROCESS** to perform OCR inference.
+
+Perform the following steps to modify the model used in the sample application:
+1.	Copy the desired model file to the `assets` directory of the project.
+2.	Copy the corresponding label text file to the `assets` directory.
+3.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
+4.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
+
+***
+
+### Video Enhancement In Android
+This document describes a method to operate Android sample application using the [RIFE](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1&models-categoryId=7bdcccc8-5584-4a06-bec6-cc3293e05cf1) model that is optimized for Exynos hardware.
+
+#### Functionality
+This application performs **video frame interpolation** by generating an intermediate frame between two input images.
+Users can select two consecutive frames, execute the RIFE model, and preview the interpolation result as an animated sequence.
+
+#### Location
+The sample is available in the `enn-sdk-samples/video-enhancement` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples) repository.
+
+#### Getting Started
+Perform the following steps to utilize the sample application:
+1. Download or clone the sample application from this repository.
+2. If there is no device available to run the application, you can use the actual devices provided in the AI Studio Farm.
+   For more information on connecting a device to Android Studio, refer to ADB Client Proxy.
+3. Use adb push command to push a sample image to the following path for testing.
+4. Select Tools → Device Manager in Android Studio. Please verify whether the physical device is properly connected.
+5. Run the video enhancement project from the sample applications obtained through git clone in Android Studio.
+6. Press LOAD and select the first input image.
+7. Press LOAD again and select the second input image.
+8. Press PROCESS to perform frame interpolation.
+9. The generated intermediate frame is displayed as an animated preview together with the two input images.
+
+Perform the following steps to modify the model used in the sample application:
+1.	Copy the desired model file to the `assets` directory of the project.
+2.	Copy the corresponding label text file to the `assets` directory.
+3.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
+4.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
 
 ***

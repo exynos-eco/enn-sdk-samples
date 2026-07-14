@@ -2,7 +2,8 @@
 This document describes a method to operate Android sample application using the [RIFE](https://soc-developer.semiconductor.samsung.com/global/solution/AI?models-page=1&project-page=1&models-categoryId=7bdcccc8-5584-4a06-bec6-cc3293e05cf1) model that is optimized for Exynos hardware.
 
 ## Functionality
-This application performs **video frame interpolation** by generating an intermediate frame between two input images. Users can select two consecutive frames, execute the RIFE model, and preview the interpolation result as an animated sequence.
+This application performs **video frame interpolation** by generating an intermediate frame between two input images. 
+Users can select two consecutive frames, execute the RIFE model, and preview the interpolation result as an animated sequence.
 
 
 <table align="center">
