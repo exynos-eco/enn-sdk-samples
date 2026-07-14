@@ -12,10 +12,10 @@
 | [Gaze Estimation In Andriod](#gaze-estimation-in-android)             | Sample Android application to demonstrate the execution of `Gaze_MobileNetV2` model with ENN SDK         |
 | [Video Classification In Andriod](#video-classification-in-android)   | Sample Android application to demonstrate the execution of `TSN_ResNet50` model with ENN SDK             |
 | [Audio Classification In Andriod](#audio-classification-in-android)   | Sample Android application to demonstrate the execution of `YamNet` model with ENN SDK                   |
-| [Drive Assistance In Andriod](#audio-classification-in-android)       | Sample Android application to demonstrate the execution of `YoloP_320x320` model with ENN SDK            |
-| [Image Editing In Andriod](#audio-classification-in-android)          | Sample Android application to demonstrate the execution of `Lama_Dilated` model with ENN SDK             |
-| [Image to Text In Andriod](#audio-classification-in-android)          | Sample Android application to demonstrate the execution of `EasyOCR` model with ENN SDK                  |
-| [Video Enhancement In Andriod](#audio-classification-in-android)      | Sample Android application to demonstrate the execution of `RIFE` model with ENN SDK                     ||
+| [Drive Assistance In Andriod](#drive-assistance-in-android)           | Sample Android application to demonstrate the execution of `YoloP_320x320` model with ENN SDK            |
+| [Image Editing In Andriod](#image-editing-in-android)                 | Sample Android application to demonstrate the execution of `Lama_Dilated` model with ENN SDK             |
+| [Image to Text In Andriod](#image-to-text-in-android)                 | Sample Android application to demonstrate the execution of `EasyOCR` model with ENN SDK                  |
+| [Video Enhancement In Andriod](#video-enhancement-in-android)         | Sample Android application to demonstrate the execution of `RIFE` model with ENN SDK                     ||
 ## Android (Kotlin) Samples
 This section provides an overview of Android (Kotlin) sample applications.
 Each sample application entry provides the details of the functionality of the sample application, its location, and instructions for running it.
