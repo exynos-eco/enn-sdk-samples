@@ -15,7 +15,8 @@
 | [Drive Assistance In Andriod](#drive-assistance-in-android)           | Sample Android application to demonstrate the execution of `YoloP_320x320` model with ENN SDK            |
 | [Image Editing In Andriod](#image-editing-in-android)                 | Sample Android application to demonstrate the execution of `Lama_Dilated` model with ENN SDK             |
 | [Image to Text In Andriod](#image-to-text-in-android)                 | Sample Android application to demonstrate the execution of `EasyOCR` model with ENN SDK                  |
-| [Video Enhancement In Andriod](#video-enhancement-in-android)         | Sample Android application to demonstrate the execution of `RIFE` model with ENN SDK                     ||
+| [Video Enhancement In Andriod](#video-enhancement-in-android)         | Sample Android application to demonstrate the execution of `RIFE` model with ENN SDK                     |
+| [Text Generation In Andriod](#text-generation-in-android)             | Sample Android application to demonstrate the execution of `Qwen3_0.6B` model with ENN SDK               |  
 ## Android (Kotlin) Samples
 This section provides an overview of Android (Kotlin) sample applications.
 Each sample application entry provides the details of the functionality of the sample application, its location, and instructions for running it.
@@ -394,6 +395,40 @@ Perform the following steps to utilize the sample application:
 7. Press LOAD again and select the second input image.
 8. Press PROCESS to perform frame interpolation.
 9. The generated intermediate frame is displayed as an animated preview together with the two input images.
+
+Perform the following steps to modify the model used in the sample application:
+1.	Copy the desired model file to the `assets` directory of the project.
+2.	Copy the corresponding label text file to the `assets` directory.
+3.	Modify the parameters in the ModelConstants.kt file to reflect the specifications of the new model.
+4.	If the inputs and outputs of the model differ from the pre-designed sample application, modify the `preProcess()`, `postProcess()` and `convertBitmapToFloatArray()` functions.
+
+***
+
+### Text Generation In Android
+This document describes a method to operate Android sample application using the [Qwen3_0.6B](https://soc-developer.semiconductor.samsung.com/global/solution/ai/models/detail/Qwen3_0.6B?tab=float&chipset=Exynos+2600) model that is optimized for Exynos hardware.
+
+#### Functionality
+This sample application performs text generation using a Large Language Model (LLM) based on text prompts entered by the user.  
+The application consists of three neural network models: two prefill models and one decode model.  
+The prefill models process the input prompt and initialize the Key-Value (KV) cache. The decode model generates output tokens autoregressively using the KV cache.  
+Tokenization, input embedding, attention mask generation, RoPE calculation, KV-cache management, and LM head processing are handled by the application.  
+The generated text is displayed incrementally on the screen, and the total inference time is displayed upon completion.  
+
+#### Location
+The sample is available in the `enn-sdk-samples/text-generation` directory within the [Github](https://github.com/exynos-eco/enn-sdk-samples) repository.
+
+#### Getting Started
+Perform the following steps to utilize the sample application:
+Due to the large file sizes, the model files and common package are not included in this GitHub repository. Please download the required files separately and follow the steps below to run the sample application.
+
+1. Download the FP16 version of the Qwen3-0.6B model from the model download link provided in the Text Generation In Android section above.  
+2. Place the downloaded NNC model files in the text-generation/app/materials/models directory.  
+3. Place the downloaded common_package in the text-generation/app/materials/common directory.  
+4. Connect a device compatible with the target Exynos chipset of the downloaded NNC models. To transfer the NNC model files and common binary files to the device, run push-qwen3.bat located in the text-generation/app/script directory. 
+For Linux environments, run push-qwen3.sh instead.  
+5. Once all required files have been successfully transferred to the device, build and run the Android sample application using Android Studio.  
+6. Enter a text prompt and press the START button to perform inference.  
+7. Verify the generated text and the total inference time displayed on the screen.  
 
 Perform the following steps to modify the model used in the sample application:
 1.	Copy the desired model file to the `assets` directory of the project.
