@@ -1,0 +1,32 @@
+# Gradle cache
+.gradle/
+
+# Android Studio settings
+.idea/
+*.iml
+
+# Build outputs
+build/
+.cxx/
+.externalNativeBuild/
+
+# Local environment
+local.properties
+
+# Android application packages
+*.apk
+*.aab
+
+# Model files and common package
+/app/materials/models/*
+/app/materials/common/*
+
+# Keep directory structure
+!/app/materials/models/.gitkeep
+!/app/materials/common/.gitkeep
+
+# Temporary files
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
